@@ -3,6 +3,7 @@ package stud.example.project.controllers;
 
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -24,9 +25,12 @@ public class FirstController {
     }
 
     @GetMapping("/secondPage")
-    public String secondPage(@RequestParam(value = "age", required = false) String age, @RequestParam(value = "job", required = false) String job){
+    public String secondPage(@RequestParam(value = "age", required = false) String age,
+                             @RequestParam(value = "job", required = false) String job, Model model){
 
-        System.out.println("age: "+age+"job: "+job);
+        model.addAttribute("age", age);
+        model.addAttribute("job", job);
         return "first/info";
     }
+
 }
