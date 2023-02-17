@@ -6,21 +6,25 @@
 </head>
 <body>
 <!-- поле ввода первого числа -->
-<input id="num1" />
 
-<!-- блок с кнопками -->
-<div id="operator_btns">
-  <button id="plus" >+</button>
-  <button id="minus" >-</button>
-  <button id="times" >x</button>
-  <button id="division" >:</button>
-</div>
+    <form action="/mathematics/result" method="get">
+        <input  type="text" name="x" placeholder="print here x var">
 
-<!-- поле ввода второго числа -->
-<input id="num2" />
-<br>
 
-<!-- кнопка для рассчётов -->
-<form action = "/mathematics/result"><button >Calculate</button></form>
+        <!-- блок с кнопками -->
+        <div id="operator_btns">
+            <button id="plus" name="act" value="plus">+</button>
+            <button id="minus" name="act" value="minus">-</button>
+            <button id="times" name="act" value="multiplication">x</button>
+            <button id="division" name="act" value="division">:</button>
+        </div>
+
+        <!-- поле ввода второго числа -->
+        <input id="num2" name = "y" placeholder="print here y var"/>
+        <br>
+
+        <!-- кнопка для рассчётов -->
+
+    </form>
 </body>
 </html>

@@ -11,15 +11,18 @@ import stud.example.project.calculatorModel.Calculator;
 @Controller
 @RequestMapping("/mathematics")
 public class CalculateController {
-
+   // @RequestParam(value = "action", required = false) String act
     @GetMapping("/result")
-    public String calculate(@RequestParam(value = "x", required = false) int x, @RequestParam(value = "y", required = false) int y,
-                            @RequestParam(value = "action", required = false) String act, Model model){
+    public String calculate(@RequestParam( required = false) double x, @RequestParam( required = false) double y,
+                            @RequestParam(required = false) String act, Model model){
 
         Calculator calculator = new Calculator();
 
-        model.addAttribute("result", calculator.calculate(x, y, act));
-
+        model.addAttribute("x", x);
+        model.addAttribute("y", y);
+        model.addAttribute("sign", calculator.getSign());
+        model.addAttribute("result", calculator.calculate(x,y,act));
+        System.out.println(calculator.getSign());
         return "calculations_views/result_view";
     }
 
