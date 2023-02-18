@@ -1,8 +1,6 @@
 
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-~
-Nsrc/main/java/stud/example/project/config/SpringMVCDispantcherServletInit.java,0\8\08b908474cb767fb2fafdb479c3033ed0d82f571
 ]
 -src/main/webapp/WEB-INF/views/first/info.html,4\3\4315f8ef84b978ed8e1a7388b3eb1a37a125b849
 t

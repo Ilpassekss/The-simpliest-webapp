@@ -20,10 +20,10 @@ public class CalculateController {
 
         model.addAttribute("x", x);
         model.addAttribute("y", y);
-        model.addAttribute("sign", calculator.getSign());
         model.addAttribute("result", calculator.calculate(x,y,act));
-        System.out.println(calculator.getSign());
-        return "calculations_views/result_view";
+        model.addAttribute("sign", calculator.getSign());
+        model.addAttribute("equalSign", "=");
+        return "calculations_views/input_view";
     }
 
     @GetMapping("/inputNumbers")

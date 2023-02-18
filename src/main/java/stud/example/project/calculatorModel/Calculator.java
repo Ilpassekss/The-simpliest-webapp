@@ -16,11 +16,11 @@ public class Calculator {
                 break;
             case "multiplication":
                 result = x*y;
-                sign="x";
+                sign="*";
                 break;
             case "division":
                 result = x/y;
-                sign=":";
+                sign="/";
                 break;
             default:
                 result = 0;
