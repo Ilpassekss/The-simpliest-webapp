@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Input</title>
+</head>
+<body>
+<!-- поле ввода первого числа -->
+
+    <form action="/mathematics/result" method="get">
+        <input  type="text" name="x" placeholder="print here x var">
+
+
+        <!-- блок с кнопками -->
+        <div id="operator_btns">
+            <button id="plus" name="act" value="plus">+</button>
+            <button id="minus" name="act" value="minus">-</button>
+            <button id="times" name="act" value="multiplication">x</button>
+            <button id="division" name="act" value="division">:</button>
+        </div>
+
+        <!-- поле ввода второго числа -->
+        <input id="num2" name = "y" placeholder="print here y var"/>
+        <br>
+
+        <!--result-->
+        Result: <span th:text="${x}"></span><span th:text="${sign}"></span><span  th:text="${y}"></span><span  th:text="${equalSign}"></span><span  th:text="${result}"></span>
+    </form>
+</body>
+</html>
